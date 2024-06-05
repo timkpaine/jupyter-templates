@@ -9,7 +9,12 @@ Support for notebook templates in jupyter and jupyterlab
 [![npm](https://img.shields.io/npm/v/jupyter-templates.svg)](https://www.npmjs.com/package/jupyter-templates)
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/timkpaine/jupyter-templates/main?urlpath=lab)
 
-![](https://raw.githubusercontent.com/timkpaine/jupyter-templates/main/docs/example1.gif)
+
+## JupyterLab
+![](https://raw.githubusercontent.com/timkpaine/jupyter-templates/main/docs/lab.gif)
+
+## Jupyter Notebook
+![](https://raw.githubusercontent.com/timkpaine/jupyter-templates/main/docs/notebook.gif)
 
 
 ## Install
@@ -35,13 +40,14 @@ To install it explicitly, run:
 
 ```bash
 jupyter labextension install jupyter-templates
-jupyter server extension enable --py jupyter-templates
+jupyter server extension enable --py jupyter_templates
 ```
 
 For classic Notebook, run:
 
 ```bash
 jupyter nbclassic-extension enable jupyter_templates/extension
+jupyter server extension enable --py jupyter_templates
 ```
 
 ## Adding templates
