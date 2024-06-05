@@ -1,0 +1,8 @@
+Type: Jupyter Notebook Extension
+Name: Jupyter Templates extension
+Description: Allow for loading of notebooks from template files
+Main: main.js
+Compatibility: 6.x, 7.x
+Icon: icon.svg
+Section: tree
+tags: []

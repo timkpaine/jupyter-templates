@@ -69,6 +69,7 @@ artifacts = [
 
 [tool.hatch.build.targets.wheel.shared-data]
 "jupyter_templates/labextension" = "share/jupyter/labextensions/jupyter_templates"
+"jupyter_templates/nbextension/static" = "share/jupyter/nbextensions/jupyter_templates"
 "jupyter_templates/extension/install.json" = "share/jupyter/labextensions/jupyter_templates/install.json"
 "jupyter_templates/extension/jupyter_templates.json" = "etc/jupyter/jupyter_server_config.d/jupyter_templates.json"
 "jupyter_templates/extension/notebook_templates" = "share/jupyter/notebook"
@@ -83,9 +84,11 @@ exclude = [
 [tool.hatch.build.hooks.jupyter-builder]
 build-function = "hatch_jupyter_builder.npm_builder"
 ensured-targets = [
+    "jupyter_templates/nbextension/static/main.js",
     "jupyter_templates/labextension/package.json",
 ]
 skip-if-exists = [
+    "jupyter_templates/nbextension/static/main.js",
     "jupyter_templates/labextension/package.json",
 ]
 dependencies = [
