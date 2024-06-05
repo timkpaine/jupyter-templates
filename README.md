@@ -2,7 +2,7 @@
 
 Support for notebook templates in jupyter and jupyterlab
 
-[![Build Status](https://github.com/timkpaine/jupyter-templates/workflows/Build%20Status/badge.svg?branch=main)](https://github.com/timkpaine/jupyter-templates/actions?query=workflow%3A%22Build+Status%22)
+[![Build Status](https://github.com/timkpaine/jupyter-templates/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/timkpaine/jupyter-templates/actions?query=workflow%3A%22Build+Status%22)
 [![codecov](https://codecov.io/gh/timkpaine/jupyter-templates/branch/main/graph/badge.svg)](https://codecov.io/gh/timkpaine/jupyter-templates)
 [![PyPI](https://img.shields.io/pypi/l/jupyter-templates.svg)](https://pypi.python.org/pypi/jupyter-templates)
 [![PyPI](https://img.shields.io/pypi/v/jupyter-templates.svg)](https://pypi.python.org/pypi/jupyter-templates)

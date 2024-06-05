@@ -1,12 +1,12 @@
 {
-  "name": "jupyter_templates",
+  "name": "jupyter-templates",
   "version": "0.1.0",
   "description": "Notebook templates",
   "author": "the jupyter_templates authors",
   "main": "lib/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/timkpaine/jupyter_templates.git"
+    "url": "https://github.com/timkpaine/jupyter-templates.git"
   },
   "license": "Apache-2.0",
   "keywords": [
