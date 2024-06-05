@@ -156,3 +156,7 @@ $RECYCLE.BIN/
 # Notebook and lab extensions
 jupyter_templates/labextension/*.tgz
 jupyter_templates/labextension
+jupyter_templates/nbextension/static
+
+# Test Notebooks
+Untitled*.ipynb

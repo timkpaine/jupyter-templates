@@ -19,7 +19,6 @@ from jupyter_server.utils import url_path_join
 TEMPLATES_IGNORE_FILE = ".jupyter_templates_ignore"
 
 
-
 class TemplatesLoader:
     def __init__(self, template_dirs, allowed_extensions=None, template_label=None):
         self.template_dirs = template_dirs

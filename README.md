@@ -29,9 +29,19 @@ conda install -c conda-forge jupyter-templates
 ```
 
 ### Jupyter Server/JupyterLab Extension
-```
+`jupyter-templates` is available as a prebuilt extension, so no further action should be necessary in JupyterLab.
+
+To install it explicitly, run:
+
+```bash
 jupyter labextension install jupyter-templates
 jupyter server extension enable --py jupyter-templates
+```
+
+For classic Notebook, run:
+
+```bash
+jupyter nbclassic-extension enable jupyter_templates/extension
 ```
 
 ## Adding templates
