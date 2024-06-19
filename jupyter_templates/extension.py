@@ -124,16 +124,18 @@ def _load_jupyter_server_extension(nb_server_app, nb6_entrypoint=False):
         # We're using the old notebook 6 extenstion entry point
         # In this case, we only support jupyter_server < 2, so fail if >=2
         from jupyter_server._version import __version__
+
         try:
             from packaging.version import parse, Version
-            if parse(__version__) >= Version('2.0.0'):
+
+            if parse(__version__) >= Version("2.0.0"):
                 nb_server_app.log.critical(
                     "You must use Jupyter Server v1 to load jupyter-templates as a classic notebook server extension. "
                     f"You have v{__version__} installed.\nYou can fix this by executing:\n"
-                    "    pip install -U \"jupyter-server<2.0.0\""
+                    '    pip install -U "jupyter-server<2.0.0"'
                 )
                 return
-        except Exception: # noqa
+        except Exception:  # noqa
             pass
 
     if nb_server_app.config.get("JupyterLabTemplates", {}).get("include_default", True):
@@ -173,5 +175,6 @@ def _load_jupyter_server_extension(nb_server_app, nb6_entrypoint=False):
             )
         ],
     )
+
 
 load_jupyter_server_extension = partial(_load_jupyter_server_extension, nb6_entrypoint=True)

@@ -29,6 +29,7 @@ tests: testpy testjs ## run all tests
 ###########
 lintpy:  ## lint python with ruff
 	python -m ruff check jupyter_templates setup.py
+	python -m ruff format --check jupyter_templates setup.py
 
 lintjs:  ## lint javascript with eslint
 	cd js; yarn lint
