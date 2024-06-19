@@ -18,7 +18,7 @@
   ],
   "scripts": {
     "build:babel": "babel src/ --source-maps --out-dir lib/",
-    "build:nbextension": "mkdirp ../jupyter_templates/nbextension/static/ && cpx 'src/notebook/main.js' ../jupyter_templates/nbextension/static/ &&  cpx 'style/icon.svg' ../jupyter_templates/nbextension/static/",
+    "build:nbextension": "mkdirp ../jupyter_templates/nbextension/static/ && cpy --flat 'src/notebook/main.js' '../jupyter_templates/nbextension/static/' && cpy --flat 'style/icon.svg' '../jupyter_templates/nbextension/static/'",
     "build:labextension": "rimraf ../jupyter_templates/labextension && jupyter labextension build .",
     "build": "yarn clean && yarn build:babel && yarn build:labextension && yarn build:nbextension",
     "check-security": "auditjs-screener 5",
@@ -65,7 +65,7 @@
     "auditjs": "^4.0.45",
     "auditjs-screener": "^0.1.1",
     "babel-jest": "^29.7.0",
-    "cpx": "^1.5.0",
+    "cpy-cli": "^5.0.0",
     "eslint": "^8.57.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-base": "^15.0.0",
