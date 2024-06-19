@@ -12,35 +12,81 @@ define(["jquery"], ($) => {
   let body = null;
   let templates = null;
   let notebook_input;
+  let container;
   let overlay;
 
   function load_overlay() {
     overlay = document.createElement("div");
     overlay.style.position = "fixed";
     overlay.style.display = "flex";
-    overlay.style.backgroundColor = "#ddd";
+    overlay.style.flexDirection = "column";
+    overlay.style.justifyContent = "center";
+    overlay.style.backgroundColor = "rgba(0, 0, 0, 0.2)";
     overlay.style.top = "0";
     overlay.style.bottom = "0";
     overlay.style.left = "0";
     overlay.style.right = "0";
-    overlay.style.height = "100px";
-    overlay.style.width = "500px";
     overlay.style.margin = "auto";
-    overlay.style.padding = "20px";
-    overlay.style.border = "1px solid black";
     overlay.style.zIndex = "1000";
-    overlay.style.filter = "drop-shadow(0 0 0.75rem black)";
 
-    overlay.append(body);
+    container = document.createElement("div");
+    container.style.position = "fixed";
+    container.style.display = "flex";
+    container.style.flexDirection = "column";
+    container.style.flexGrow = "1";
+    container.style.justifyContent = "center";
+    container.style.backgroundColor = "#fff";
+    container.style.top = "0";
+    container.style.bottom = "0";
+    container.style.left = "0";
+    container.style.right = "0";
+    container.style.height = "200px";
+    container.style.width = "300px";
+    container.style.margin = "auto";
+    container.style.padding = "20px";
+    container.style.border = "1px solid black";
+    container.style.zIndex = "1001";
+    container.style.filter = "drop-shadow(0 0 0.75rem black)";
+
+    overlay.append(container);
+    container.append(body);
     document.body.appendChild(overlay);
   }
+
+  const setupTemplateSelectorUI = () => {
+    const kernels = $("#notebook-kernels");
+    const new_template = $("<li>").attr("href", "#").attr("role", "none").attr("id", "new-template");
+
+    const new_template_link = $("<a>")
+      .text("Template")
+      .attr("role", "menuitem")
+      .attr("tabindex", "-1")
+      .attr("href", "#")
+      .on("click", () => {
+        load_overlay();
+      });
+
+    new_template.append(new_template_link);
+    kernels.after(new_template);
+  };
 
   function load_ipython_extension() {
     fetch("templates/names").then(async (res) => {
       if (res.ok) {
+        // setup UI
+        setupTemplateSelectorUI();
+
         const template_data = await res.json();
         templates = template_data.templates;
         body = document.createElement("div");
+        body.style.display = "flex";
+        body.style.flexDirection = "column";
+        body.style.flexGrow = "1";
+        body.style.justifyContent = "space-around";
+
+        const title = document.createElement("h4");
+        title.textContent = "Template";
+
         const label = document.createElement("label");
         label.textContent = "Template:";
 
@@ -81,6 +127,8 @@ define(["jquery"], ($) => {
         const ok = document.createElement("button");
         ok.textContent = "GO";
         ok.style.backgroundColor = "#2196f3";
+        ok.style.color = "#fff";
+
         ok.onclick = async () => {
           document.body.removeChild(overlay);
           const res2 = await fetch(`templates/get?${new URLSearchParams({template: notebook_input.value})}`);
@@ -102,7 +150,8 @@ define(["jquery"], ($) => {
         };
         const cancel = document.createElement("button");
         cancel.textContent = "Cancel";
-        cancel.style.backgroundColor = "#9e9e9e";
+        cancel.style.backgroundColor = "#888";
+        cancel.style.color = "#fff";
         cancel.style.marginRight = "10px";
         cancel.onclick = () => {
           document.body.removeChild(overlay);
@@ -116,27 +165,13 @@ define(["jquery"], ($) => {
         buttons.appendChild(cancel);
         buttons.appendChild(ok);
 
+        body.appendChild(title);
         body.appendChild(label);
         body.appendChild(package_input);
         body.appendChild(notebook_input);
         body.appendChild(buttons);
       }
     });
-
-    const kernels = $("#notebook-kernels");
-    const new_template = $("<li>").attr("href", "#").attr("role", "none").attr("id", "new-template");
-
-    const new_template_link = $("<a>")
-      .text("Template")
-      .attr("role", "menuitem")
-      .attr("tabindex", "-1")
-      .attr("href", "#")
-      .on("click", () => {
-        load_overlay();
-      });
-
-    new_template.append(new_template_link);
-    kernels.after(new_template);
   }
 
   return {

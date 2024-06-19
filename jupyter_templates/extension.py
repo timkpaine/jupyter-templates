@@ -13,6 +13,7 @@ import tornado.web
 
 from io import open
 from fnmatch import fnmatch
+from functools import partial
 from jupyter_server.base.handlers import JupyterHandler
 from jupyter_server.utils import url_path_join
 
@@ -100,14 +101,13 @@ class TemplateNamesHandler(JupyterHandler):
     def initialize(self, loader):
         self.loader = loader
 
-    @tornado.web.authenticated
     def get(self):
         templates, _ = self.loader.get_templates()
         response = {"templates": templates, "template_label": self.loader.template_label}
         self.finish(json.dumps(response))
 
 
-def load_jupyter_server_extension(nb_server_app):
+def _load_jupyter_server_extension(nb_server_app, nb6_entrypoint=False):
     """
     Called when the extension is loaded.
 
@@ -119,11 +119,27 @@ def load_jupyter_server_extension(nb_server_app):
 
     allowed_extensions = nb_server_app.config.get("JupyterLabTemplates", {}).get("allowed_extensions", ["*.ipynb"])
 
+    # Borrowed from nbdime
+    if nb6_entrypoint:
+        # We're using the old notebook 6 extenstion entry point
+        # In this case, we only support jupyter_server < 2, so fail if >=2
+        from jupyter_server._version import __version__
+        try:
+            from packaging.version import parse, Version
+            if parse(__version__) >= Version('2.0.0'):
+                nb_server_app.log.critical(
+                    "You must use Jupyter Server v1 to load jupyter-templates as a classic notebook server extension. "
+                    f"You have v{__version__} installed.\nYou can fix this by executing:\n"
+                    "    pip install -U \"jupyter-server<2.0.0\""
+                )
+                return
+        except Exception: # noqa
+            pass
+
     if nb_server_app.config.get("JupyterLabTemplates", {}).get("include_default", True):
         template_dirs.insert(0, os.path.join(os.path.dirname(__file__), "templates"))
 
     base_url = web_app.settings["base_url"]
-
     host_pattern = ".*$"
     nb_server_app.log.info("Installing jupyter_templates handler on path %s" % url_path_join(base_url, "templates"))
 
@@ -157,3 +173,5 @@ def load_jupyter_server_extension(nb_server_app):
             )
         ],
     )
+
+load_jupyter_server_extension = partial(_load_jupyter_server_extension, nb6_entrypoint=True)
