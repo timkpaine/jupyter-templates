@@ -7,13 +7,19 @@
 #
 # for Coverage
 from unittest.mock import MagicMock
-from jupyter_templates.extension import load_jupyter_server_extension
+from jupyter_templates.extension import load_jupyter_server_extension, _load_jupyter_server_extension
 
 
 class TestExtension:
     def test_load_jupyter_server_extension(self):
         m = MagicMock()
 
+        m.web_app.settings = {}
+        m.web_app.settings["base_url"] = "/test"
+        _load_jupyter_server_extension(m)
+
+    def test_load_jupyter_server_extension_nb6_server2(self):
+        m = MagicMock()
         m.web_app.settings = {}
         m.web_app.settings["base_url"] = "/test"
         load_jupyter_server_extension(m)
