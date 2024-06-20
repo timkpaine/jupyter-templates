@@ -8,7 +8,7 @@
 from .extension import load_jupyter_server_extension, _load_jupyter_server_extension  # noqa: F401
 from .nbextension import _jupyter_nbextension_paths
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 
 
 def _jupyter_server_extension_paths():
