@@ -1,6 +1,6 @@
 {
   "name": "jupyter-templates",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Notebook templates",
   "author": "the jupyter_templates authors",
   "main": "lib/index.js",
