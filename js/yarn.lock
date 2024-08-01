@@ -1796,19 +1796,19 @@
     path-browserify "^1.0.0"
     url-parse "~1.5.4"
 
-"@jupyterlab/docmanager@^4.2.1":
-  version "4.2.1"
-  resolved "https://registry.yarnpkg.com/@jupyterlab/docmanager/-/docmanager-4.2.1.tgz#e8501c46df9d3afb7f9121ead079a3ccd32818bc"
-  integrity sha512-7kDwWVK9J85dacbIN/mq8Fc/XyCWTLYx8HBBPdP6kdJdeXZaDeI8x75jzp+WwvnPs+bdaO7rZSd6YnTzu4T9SQ==
+"@jupyterlab/docmanager@^4.2.4":
+  version "4.2.4"
+  resolved "https://registry.yarnpkg.com/@jupyterlab/docmanager/-/docmanager-4.2.4.tgz#b7aee9c21f108e6e3a0a4bf8688aaed898e643e7"
+  integrity sha512-Gcqxkpmoo9VGhIe/AiefD8Zk3PyJnDU3jx+b8wDDAtj11EKYDptnW1/SkfLgEAUmcYYd5lMPjzPvfZtcs5doXg==
   dependencies:
-    "@jupyterlab/apputils" "^4.3.1"
-    "@jupyterlab/coreutils" "^6.2.1"
-    "@jupyterlab/docregistry" "^4.2.1"
-    "@jupyterlab/services" "^7.2.1"
-    "@jupyterlab/statedb" "^4.2.1"
-    "@jupyterlab/statusbar" "^4.2.1"
-    "@jupyterlab/translation" "^4.2.1"
-    "@jupyterlab/ui-components" "^4.2.1"
+    "@jupyterlab/apputils" "^4.3.4"
+    "@jupyterlab/coreutils" "^6.2.4"
+    "@jupyterlab/docregistry" "^4.2.4"
+    "@jupyterlab/services" "^7.2.4"
+    "@jupyterlab/statedb" "^4.2.4"
+    "@jupyterlab/statusbar" "^4.2.4"
+    "@jupyterlab/translation" "^4.2.4"
+    "@jupyterlab/ui-components" "^4.2.4"
     "@lumino/algorithm" "^2.0.1"
     "@lumino/coreutils" "^2.1.2"
     "@lumino/disposable" "^2.1.2"
@@ -1861,19 +1861,19 @@
     react "^18.2.0"
 
 "@jupyterlab/filebrowser@^4.1.5", "@jupyterlab/filebrowser@^4.2.1":
-  version "4.2.1"
-  resolved "https://registry.yarnpkg.com/@jupyterlab/filebrowser/-/filebrowser-4.2.1.tgz#310af6d7091ff38d9ef350c9e88466ec01a115a2"
-  integrity sha512-kObalqz+z26UDtp+vEtFGFtc63gsI5GjVFXkmvCsFTifIFHkAFzBp0gTCTdOyABCicdtQH6ucBy8RrylEHCJRg==
+  version "4.2.4"
+  resolved "https://registry.yarnpkg.com/@jupyterlab/filebrowser/-/filebrowser-4.2.4.tgz#d3cd8297ee6ac6cecc44991115d4a327b038bff4"
+  integrity sha512-Py67HN/Rt4/JiVyaiQrNE1cp508S5whTAYDWXJLiSO5DJpnPIeicugd7Pi5h6LHbsTPN6O+MmM8JehCsVofjAw==
   dependencies:
-    "@jupyterlab/apputils" "^4.3.1"
-    "@jupyterlab/coreutils" "^6.2.1"
-    "@jupyterlab/docmanager" "^4.2.1"
-    "@jupyterlab/docregistry" "^4.2.1"
-    "@jupyterlab/services" "^7.2.1"
-    "@jupyterlab/statedb" "^4.2.1"
-    "@jupyterlab/statusbar" "^4.2.1"
-    "@jupyterlab/translation" "^4.2.1"
-    "@jupyterlab/ui-components" "^4.2.1"
+    "@jupyterlab/apputils" "^4.3.4"
+    "@jupyterlab/coreutils" "^6.2.4"
+    "@jupyterlab/docmanager" "^4.2.4"
+    "@jupyterlab/docregistry" "^4.2.4"
+    "@jupyterlab/services" "^7.2.4"
+    "@jupyterlab/statedb" "^4.2.4"
+    "@jupyterlab/statusbar" "^4.2.4"
+    "@jupyterlab/translation" "^4.2.4"
+    "@jupyterlab/ui-components" "^4.2.4"
     "@lumino/algorithm" "^2.0.1"
     "@lumino/coreutils" "^2.1.2"
     "@lumino/disposable" "^2.1.2"
@@ -2112,21 +2112,7 @@
     "@lumino/properties" "^2.0.1"
     "@lumino/signaling" "^2.1.2"
 
-"@jupyterlab/statusbar@^4.2.1":
-  version "4.2.1"
-  resolved "https://registry.yarnpkg.com/@jupyterlab/statusbar/-/statusbar-4.2.1.tgz#426d33a81230a3c74ebd81ec1e1ebce568b2c9f1"
-  integrity sha512-l8vfswFaMJlvleQtsQqSeL0X9/9jxSAKmL5IPRSs9XEVn+hrqQSbXENJnoZs7q7LOKzGKbIroOQVLu3Or0f+IA==
-  dependencies:
-    "@jupyterlab/ui-components" "^4.2.1"
-    "@lumino/algorithm" "^2.0.1"
-    "@lumino/coreutils" "^2.1.2"
-    "@lumino/disposable" "^2.1.2"
-    "@lumino/messaging" "^2.0.1"
-    "@lumino/signaling" "^2.1.2"
-    "@lumino/widgets" "^2.3.2"
-    react "^18.2.0"
-
-"@jupyterlab/statusbar@^4.2.4":
+"@jupyterlab/statusbar@^4.2.1", "@jupyterlab/statusbar@^4.2.4":
   version "4.2.4"
   resolved "https://registry.yarnpkg.com/@jupyterlab/statusbar/-/statusbar-4.2.4.tgz#4cb13ffad569e9a0eec853856f12e2e46b0c2745"
   integrity sha512-PnO9mdOs58kGrVK2Q0m5SyXd6o1kKPyAVZbWQdHBlaFguZg1oxgKXdwcDYPO4V4cpQJsxaBl4FunHH2GxZcrVg==
