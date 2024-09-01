@@ -2021,13 +2021,13 @@
     react "^18.2.0"
 
 "@jupyterlab/launcher@^4.1.5":
-  version "4.2.4"
-  resolved "https://registry.yarnpkg.com/@jupyterlab/launcher/-/launcher-4.2.4.tgz#32948d2a6e33d1de9e4094405f6dd79423f9a3b2"
-  integrity sha512-lL5JGngiHZcusd4Tg+FI75X4VxiCQiKZio3dv0nANinyo5wOVXpHqzwYj3bkqCZhtXAEdXtOypjXuP8WWPoN5g==
+  version "4.2.5"
+  resolved "https://registry.yarnpkg.com/@jupyterlab/launcher/-/launcher-4.2.5.tgz#4c96f44e9223532a33135ad1881157975fc67ec9"
+  integrity sha512-lT/XIkQvalnn/9z+WFVqpc/7uSJPM7PeZaE2kwyYNGsP5raTrfbm9TzklkSo9VQGYCqe8ygY/S4PfZHWuDXcmg==
   dependencies:
-    "@jupyterlab/apputils" "^4.3.4"
-    "@jupyterlab/translation" "^4.2.4"
-    "@jupyterlab/ui-components" "^4.2.4"
+    "@jupyterlab/apputils" "^4.3.5"
+    "@jupyterlab/translation" "^4.2.5"
+    "@jupyterlab/ui-components" "^4.2.5"
     "@lumino/algorithm" "^2.0.1"
     "@lumino/commands" "^2.3.0"
     "@lumino/coreutils" "^2.1.2"
