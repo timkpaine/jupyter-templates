@@ -42,7 +42,7 @@ dependencies = [
 [project.optional-dependencies]
 develop = [
     "check-manifest",
-    "ruff>=0.5.0,<0.7",
+    "ruff>=0.5.0,<0.9",
     "pytest",
     "pytest-cov",
     "twine>=5,<6.1"
