@@ -2,11 +2,10 @@
 
 Support for notebook templates in jupyter and jupyterlab
 
-[![Build Status](https://github.com/timkpaine/jupyter-templates/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/timkpaine/jupyter-templates/actions?query=workflow%3A%22Build+Status%22)
+[![Build Status](https://github.com/timkpaine/jupyter-templates/actions/workflows/build.yml/badge.svg?branch=main&event=push)](https://github.com/timkpaine/jupyter-templates/actions/workflows/build.yml)
 [![codecov](https://codecov.io/gh/timkpaine/jupyter-templates/branch/main/graph/badge.svg)](https://codecov.io/gh/timkpaine/jupyter-templates)
-[![PyPI](https://img.shields.io/pypi/l/jupyter-templates.svg)](https://pypi.python.org/pypi/jupyter-templates)
+[![License](https://img.shields.io/github/license/timkpaine/jupyter-templates)](https://github.com/timkpaine/jupyter-templates)
 [![PyPI](https://img.shields.io/pypi/v/jupyter-templates.svg)](https://pypi.python.org/pypi/jupyter-templates)
-[![npm](https://img.shields.io/npm/v/jupyter-templates.svg)](https://www.npmjs.com/package/jupyter-templates)
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/timkpaine/jupyter-templates/main?urlpath=lab)
 
 
@@ -78,5 +77,11 @@ All notebooks in this directory will be ignored (but has no effect on subdirecto
 - `template_label`: set label for template UI icon (default "Template")
 
 
+## License
 
 This software is licensed under the Apache 2.0 license. See the [LICENSE](LICENSE) file for details.
+
+
+> [!NOTE]
+> This library was generated using [copier](https://copier.readthedocs.io/en/stable/) from the [Base Python Project Template repository](https://github.com/python-project-templates/base).
+

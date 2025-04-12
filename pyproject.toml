@@ -1,70 +1,138 @@
 [build-system]
 requires = [
-    "hatchling>=1.22.4,<1.28",
-    "pkginfo>=1.10,<1.13",
+    "hatchling",
+    "hatch-jupyter-builder",
     "jupyterlab>=4,<5",
 ]
-build-backend = "hatchling.build"
+build-backend="hatchling.build"
 
 [project]
-name = "jupyter_templates"
-description = "notebook templates for jupyter and jupyterlab"
-version = "0.1.1"
+name = "jupyter-templates"
+authors = [{name = "the jupyter-templates authors", email = "t.paine154@gmail.com"}]
+description = "Support for notebook templates in jupyter and jupyterlab"
 readme = "README.md"
-license = { file = "LICENSE" }
-requires-python = ">=3.7"
-authors = [
-    { name = "the jupyter_templates authors" },
-]
-keywords = [
-    "Jupyter",
-    "JupyterLab",
-    "JupyterLab Extension",
-    "Templates",
-]
+license = { text = "Apache-2.0" }
+version = "0.1.1"
+requires-python = ">=3.9"
+keywords = []
+
 classifiers = [
-    "Development Status :: 4 - Beta",
-    "Framework :: Jupyter",
-    "Framework :: Jupyter :: JupyterLab",
+    "Development Status :: 3 - Alpha",
     "Programming Language :: Python",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
-    "License :: OSI Approved :: Apache Software License",
 ]
-dependencies = [
-    "jupyterlab>=4,<5",
-]
+
+dependencies = []
 
 [project.optional-dependencies]
 develop = [
+    "build",
+    "bump-my-version",
     "check-manifest",
-    "ruff>=0.5.0,<0.12",
+    "hatch-jupyter-builder",
+    "hatchling",
+    "jupyterlab>=4,<5",
     "pytest",
     "pytest-cov",
-    "twine>=5,<6.2"
-]
-test = [
-    "pytest",
-    "pytest-cov",
+    "ruff",
+    "twine",
+    "wheel",
 ]
 
+[project.scripts]
+
 [project.urls]
-Repository = "https://github.com/timkpaine/jupyter_templates"
-Homepage = "https://github.com/timkpaine/jupyter_templates"
+Repository = "https://github.com/timkpaine/jupyter-templates"
+Homepage = "https://github.com/timkpaine/jupyter-templates"
+
+[tool.bumpversion]
+current_version = "0.1.1"
+commit = true
+tag = true
+
+[[tool.bumpversion.files]]
+filename = "jupyter_templates/__init__.py"
+search = '__version__ = "{current_version}"'
+replace = '__version__ = "{new_version}"'
+
+[[tool.bumpversion.files]]
+filename = "pyproject.toml"
+search = 'version = "{current_version}"'
+replace = 'version = "{new_version}"'
+
+[[tool.bumpversion.files]]
+filename = "js/package.json"
+search = '"version": "{current_version}"'
+replace = '"version": "{new_version}"'
+
+[[tool.bumpversion.files]]
+filename = "binder/requirements.txt"
+search = "jupyter-templates=={current_version}"
+replace = "jupyter-templates=={new_version}"
 
 [tool.check-manifest]
 ignore = [
-	"jupyter_templates/labextension/**",
-	"js/**"
+    ".copier-answers.yml",
+    "js/pnpm-lock.yaml",
+    "Makefile",
+    ".vscode/**",
+    "binder/**",
+    "jupyter_templates/extension/**",
+    "jupyter_templates/labextension/**",
+    "jupyter_templates/nbextension/**",
+    "docs/**/*",
+    "js/dist/**/*",
+    "js/lib/**/*",
 ]
+
+[tool.coverage.run]
+branch = true
+omit = [
+    "jupyter_templates/tests/integration/",
+]
+[tool.coverage.report]
+exclude_also = [
+    "raise NotImplementedError",
+    "if __name__ == .__main__.:",
+    "@(abc\\.)?abstractmethod",
+]
+ignore_errors = true
+fail_under = 50
 
 [tool.hatch.build]
 artifacts = [
-    "jupyter_templates/labextension"
+    "jupyter_templates/nbextension",
+    "jupyter_templates/labextension",
+]
+
+[tool.hatch.build.sources]
+src = "/"
+
+[tool.hatch.build.targets.sdist]
+packages = ["jupyter_templates", "js"]
+exclude = [
+    "/.github",
+    "/.vscode",
+    "/binder",
+    "/docs",
+    "/js/dist",
+    "/js/node_modules",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["jupyter_templates"]
+exclude = [
+    "/.github",
+    "/.vscode",
+    "/binder",
+    "/docs",
+    "/js",
 ]
 
 [tool.hatch.build.targets.wheel.shared-data]
@@ -73,13 +141,6 @@ artifacts = [
 "jupyter_templates/extension/install.json" = "share/jupyter/labextensions/jupyter_templates/install.json"
 "jupyter_templates/extension/jupyter_templates.json" = "etc/jupyter/jupyter_server_config.d/jupyter_templates.json"
 "jupyter_templates/extension/notebook_templates" = "share/jupyter/notebook"
-
-[tool.hatch.build.targets.sdist]
-exclude = [
-    ".github",
-    "binder",
-    "docs",
-]
 
 [tool.hatch.build.hooks.jupyter-builder]
 build-function = "hatch_jupyter_builder.npm_builder"
@@ -92,16 +153,30 @@ skip-if-exists = [
     "jupyter_templates/labextension/package.json",
 ]
 dependencies = [
-    "hatch-jupyter-builder>=0.5.0",
+    "hatch-jupyter-builder",
 ]
 
 [tool.hatch.build.hooks.jupyter-builder.build-kwargs]
 path = "js"
 build_cmd = "build"
-npm = "yarn"
+npm = "pnpm"
+
+[tool.pytest.ini_options]
+addopts = ["-vvv", "--junitxml=junit.xml"]
+asyncio_mode = "strict"
+testpaths = "jupyter_templates/tests"
 
 [tool.ruff]
-line-length = 120
+line-length = 150
+
+[tool.ruff.lint]
+extend-select = ["I"]
+
+[tool.ruff.lint.isort]
+combine-as-imports = true
+default-section = "third-party"
+known-first-party = ["jupyter_templates"]
+section-order = ["future", "standard-library", "third-party", "first-party", "local-folder"]
 
 [tool.ruff.lint.per-file-ignores]
 "__init__.py" = ["F401"]

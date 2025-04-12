@@ -1,33 +1,16 @@
 {
   "name": "jupyter-templates",
   "version": "0.1.1",
-  "description": "Notebook templates",
-  "author": "the jupyter_templates authors",
-  "main": "lib/index.js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/timkpaine/jupyter-templates.git"
-  },
+  "description": "Support for notebook templates in jupyter and jupyterlab",
+  "repository": "git@github.com:timkpaine/jupyter-templates.git",
+  "author": "the jupyter-templates authors <t.paine154@gmail.com>",
   "license": "Apache-2.0",
   "keywords": [
     "jupyter",
     "jupyterlab",
-    "jupyterlab-extension",
-    "templates",
-    "finos"
+    "jupyterlab-extension"
   ],
-  "scripts": {
-    "build:babel": "babel src/ --source-maps --out-dir lib/",
-    "build:nbextension": "mkdirp ../jupyter_templates/nbextension/static/ && cpy --flat 'src/notebook/main.js' '../jupyter_templates/nbextension/static/' && cpy --flat 'style/icon.svg' '../jupyter_templates/nbextension/static/'",
-    "build:labextension": "rimraf ../jupyter_templates/labextension && jupyter labextension build .",
-    "build": "yarn clean && yarn build:babel && yarn build:labextension && yarn build:nbextension",
-    "check-security": "auditjs-screener 5",
-    "clean": "rimraf lib",
-    "fix": "yarn lint --fix",
-    "lint": "eslint -c .eslintrc.js --ext .js src/ tests/",
-    "prepublishOnly": "yarn run build",
-    "test": "jest --coverage --collectCoverageFrom=src/*.{js}"
-  },
+  "main": "lib/index.js",
   "files": [
     "lib/**/*.{d.ts,eot,gif,html,jpg,js,js.map,json,png,svg,woff2,ttf}",
     "style/**/*.css"
@@ -46,6 +29,18 @@
       }
     }
   },
+  "scripts": {
+    "build:babel": "babel src/ --source-maps --out-dir lib/",
+    "build:nbextension": "mkdirp ../jupyter_templates/nbextension/static/ && cpy --flat 'src/notebook/main.js' '../jupyter_templates/nbextension/static/' && cpy --flat 'style/icon.svg' '../jupyter_templates/nbextension/static/'",
+    "build:labextension": "rimraf ../jupyter_templates/labextension && jupyter labextension build .",
+    "build": "pnpm clean && pnpm build:babel && pnpm build:labextension && pnpm build:nbextension",
+    "clean": "rimraf lib",
+    "fix": "pnpm lint --fix",
+    "lint": "eslint -c .eslintrc.js --ext .js src/ tests/",
+    "preinstall": "npx only-allow pnpm",
+    "prepublishOnly": "pnpm run build",
+    "test": "jest --coverage --collectCoverageFrom=src/*.{js}"
+  },
   "dependencies": {
     "@jupyterlab/application": "^4.1.5",
     "@jupyterlab/apputils": "^4.2.5",
@@ -62,8 +57,6 @@
     "@babel/eslint-parser": "^7.24.1",
     "@babel/preset-env": "^7.24.3",
     "@jupyterlab/builder": "^4.1.5",
-    "auditjs": "^4.0.45",
-    "auditjs-screener": "^0.1.1",
     "babel-jest": "^29.7.0",
     "cpy-cli": "^5.0.0",
     "eslint": "^8.57.0",

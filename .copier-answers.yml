@@ -1,0 +1,10 @@
+# Changes here will be overwritten by Copier
+_commit: cbb6305
+_src_path: https://github.com/python-project-templates/base.git
+add_extension: jupyter
+email: t.paine154@gmail.com
+github: timkpaine
+project_description: Support for notebook templates in jupyter and jupyterlab
+project_name: jupyter templates
+python_version_primary: '3.11'
+team: the jupyter-templates authors
