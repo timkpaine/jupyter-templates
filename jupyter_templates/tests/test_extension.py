@@ -7,7 +7,8 @@
 #
 # for Coverage
 from unittest.mock import MagicMock
-from jupyter_templates.extension import load_jupyter_server_extension, _load_jupyter_server_extension
+
+from jupyter_templates.extension import _load_jupyter_server_extension, load_jupyter_server_extension
 
 
 class TestExtension:

@@ -8,12 +8,12 @@
 import json
 import os
 import os.path
-import jupyter_core.paths
-import tornado.web
-
-from io import open
 from fnmatch import fnmatch
 from functools import partial
+from io import open
+
+import jupyter_core.paths
+import tornado.web
 from jupyter_server.base.handlers import JupyterHandler
 from jupyter_server.utils import url_path_join
 
@@ -126,7 +126,7 @@ def _load_jupyter_server_extension(nb_server_app, nb6_entrypoint=False):
         from jupyter_server._version import __version__
 
         try:
-            from packaging.version import parse, Version
+            from packaging.version import Version, parse
 
             if parse(__version__) >= Version("2.0.0"):
                 nb_server_app.log.critical(
