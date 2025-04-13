@@ -148,19 +148,11 @@ exclude = [
 [tool.hatch.build.hooks.jupyter-builder]
 build-function = "hatch_jupyter_builder.npm_builder"
 ensured-targets = [
-<<<<<<< before updating
     "jupyter_templates/nbextension/static/main.js",
     "jupyter_templates/labextension/package.json",
 ]
 skip-if-exists = [
     "jupyter_templates/nbextension/static/main.js",
-=======
-    "jupyter_templates/nbextension/static/notebook.js",
-    "jupyter_templates/labextension/package.json",
-]
-skip-if-exists = [
-    "jupyter_templates/nbextension/static/notebook.js",
->>>>>>> after updating
     "jupyter_templates/labextension/package.json",
 ]
 dependencies = [
