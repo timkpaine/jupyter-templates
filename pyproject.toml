@@ -130,7 +130,6 @@ exclude = [
 
 [tool.hatch.build.targets.wheel]
 packages = ["jupyter_templates"]
-<<<<<<< before updating
 exclude = [
     "/.github",
     "/.vscode",
@@ -138,9 +137,6 @@ exclude = [
     "/docs",
     "/js",
 ]
-=======
-exclude = ["js"]
->>>>>>> after updating
 
 [tool.hatch.build.targets.wheel.shared-data]
 "jupyter_templates/labextension" = "share/jupyter/labextensions/jupyter_templates"
