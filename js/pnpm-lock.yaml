@@ -21,8 +21,8 @@ importers:
         specifier: ^4.1.5
         version: 4.4.0
       '@jupyterlab/mainmenu':
-        specifier: ^4.1.5
-        version: 4.4.0(react@18.3.1)
+        specifier: ^4.4.1
+        version: 4.4.1(react@18.3.1)
       '@jupyterlab/notebook':
         specifier: ^4.1.5
         version: 4.4.0
@@ -984,8 +984,8 @@ packages:
   '@jupyterlab/lsp@4.4.0':
     resolution: {integrity: sha512-krGYrpfKAePmzhmZtgfjUlf9hWp75+AwxKhpi5juyB2puwOygz2KNPs6FWsmvFGTx8PUNH3QZa/qo0OoFPCQCw==}
 
-  '@jupyterlab/mainmenu@4.4.0':
-    resolution: {integrity: sha512-RCiFDaxEy9aopMHzgTT/1aIpQM0bsYDsv/EyMRE/8Ehw1aHfXOdKsCwbKcu6h8iT7JVIoc0gDeWiV2eV/qU8AQ==}
+  '@jupyterlab/mainmenu@4.4.1':
+    resolution: {integrity: sha512-HKA6bJnLwXTjtP3Mysrwsj1VUc7S1A4gjH/eWfL39YMaP3leJj3dGoyszjpzMk/zojpWkBv+vBQwpMg+40hFAw==}
 
   '@jupyterlab/nbformat@4.4.0':
     resolution: {integrity: sha512-TDXQmsathEz9Ljbu1GDDzqgs2YS3/PX7rqp2shYWAYwvlzypDLTD8A2E7wyIp3L+9Kir1WuHxRkhl3yW2mkvfQ==}
@@ -5778,15 +5778,15 @@ snapshots:
       - react
       - utf-8-validate
 
-  '@jupyterlab/mainmenu@4.4.0(react@18.3.1)':
+  '@jupyterlab/mainmenu@4.4.1(react@18.3.1)':
     dependencies:
-      '@jupyterlab/apputils': 4.5.0
-      '@jupyterlab/translation': 4.4.0(react@18.3.1)
-      '@jupyterlab/ui-components': 4.4.0(react@18.3.1)
+      '@jupyterlab/apputils': 4.5.1
+      '@jupyterlab/translation': 4.4.1(react@18.3.1)
+      '@jupyterlab/ui-components': 4.4.1(react@18.3.1)
       '@lumino/algorithm': 2.0.3
       '@lumino/commands': 2.3.2
       '@lumino/coreutils': 2.2.1
-      '@lumino/widgets': 2.7.0
+      '@lumino/widgets': 2.7.1
     transitivePeerDependencies:
       - bufferutil
       - react
@@ -5859,7 +5859,7 @@ snapshots:
       '@jupyterlab/observables': 5.4.0
       '@jupyterlab/rendermime': 4.4.1(react@18.3.1)
       '@jupyterlab/rendermime-interfaces': 3.12.1
-      '@jupyterlab/services': 7.4.1(react@18.3.1)
+      '@jupyterlab/services': 7.4.0(react@18.3.1)
       '@jupyterlab/translation': 4.4.1(react@18.3.1)
       '@lumino/algorithm': 2.0.3
       '@lumino/coreutils': 2.2.1
