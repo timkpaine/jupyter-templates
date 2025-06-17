@@ -81,7 +81,7 @@ replace = "jupyter-templates=={new_version}"
 
 [tool.check-manifest]
 ignore = [
-    ".copier-answers.yml",
+    ".copier-answers.yaml",
     "js/pnpm-lock.yaml",
     "Makefile",
     ".vscode/**",
