@@ -131,28 +131,19 @@ exclude = [
 [tool.hatch.build.targets.wheel]
 packages = ["jupyter_templates"]
 exclude = [
-<<<<<<< before updating
     "/.github",
     "/.vscode",
     "/binder",
     "/docs",
     "/js",
-=======
-    "/js"
->>>>>>> after updating
 ]
 
 [tool.hatch.build.targets.wheel.shared-data]
 "jupyter_templates/labextension" = "share/jupyter/labextensions/jupyter_templates"
-<<<<<<< before updating
 "jupyter_templates/nbextension/static" = "share/jupyter/nbextensions/jupyter_templates"
 "jupyter_templates/extension/install.json" = "share/jupyter/labextensions/jupyter_templates/install.json"
 "jupyter_templates/extension/jupyter_templates.json" = "etc/jupyter/jupyter_server_config.d/jupyter_templates.json"
 "jupyter_templates/extension/notebook_templates" = "share/jupyter/notebook"
-=======
-"jupyter_templates/extension/install.json" = "share/jupyter/labextensions/jupyter_templates/install.json"
-"jupyter_templates/extension/jupyter_templates.json" = "etc/jupyter/jupyter_server_config.d/jupyter_templates.json"
->>>>>>> after updating
 
 [tool.hatch.build.hooks.jupyter-builder]
 build-function = "hatch_jupyter_builder.npm_builder"
