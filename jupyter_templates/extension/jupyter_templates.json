@@ -3,10 +3,13 @@
     "jpserver_extensions": {
       "jupyter_templates": true
     }
+<<<<<<< before updating
   },
   "NotebookApp": {
     "nbserver_extensions": {
       "jupyter_templates": true
     }
+=======
+>>>>>>> after updating
   }
 }
