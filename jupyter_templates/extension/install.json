@@ -1,11 +1,5 @@
 {
-<<<<<<< before updating
-    "packageManager": "python",
-    "packageName": "jupyter_templates",
-    "uninstallInstructions": "Use your Python package manager (pip, conda, etc.) to uninstall the package jupyter_templates"
-=======
   "packageManager": "python",
   "packageName": "jupyter-templates",
   "uninstallInstructions": "Use your Python package manager (pip, conda, etc.) to uninstall the package jupyter-templates"
->>>>>>> after updating
 }
