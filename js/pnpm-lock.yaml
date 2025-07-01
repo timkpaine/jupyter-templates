@@ -15,8 +15,8 @@ importers:
         specifier: ^4.5.4
         version: 4.5.4
       '@jupyterlab/filebrowser':
-        specifier: ^4.4.2
-        version: 4.4.3
+        specifier: ^4.4.4
+        version: 4.4.4
       '@jupyterlab/launcher':
         specifier: ^4.4.2
         version: 4.4.3
@@ -1046,9 +1046,6 @@ packages:
   '@jupyterlab/coreutils@6.4.4':
     resolution: {integrity: sha512-Isqwm/HbypOA9sV1wnE6sXiePbYNFjV9IEzIXnUww6PpTLbE79oYgPWkdcGbaXzsqhgpBYDYgmnnUIFgDC4JZQ==}
 
-  '@jupyterlab/docmanager@4.4.3':
-    resolution: {integrity: sha512-p3Tk8NTdi+htbXGADVV9stXzPqqWg+m9L9YumCM02k/dNUGwZlqaZNledL6YEKIsXHJ3P5mhCGKTPtkFvzBgTA==}
-
   '@jupyterlab/docmanager@4.4.4':
     resolution: {integrity: sha512-qKLvOp2Lf6Trt5Gl6k9y+CXGqzWkY7fPSWFEmT2IrwRn6P3dwejvTRma7WFYTydVWa7W7SBbHmLcgoWZSVfdqw==}
 
@@ -1060,9 +1057,6 @@ packages:
 
   '@jupyterlab/documentsearch@4.4.4':
     resolution: {integrity: sha512-yO0gtYtUXFFpni+kejuCCwyRh0quv3ENFxx823YVgmyjCtssi42EIhmEHJo++aG+mLOLBYEEErIu/25LGa2Ryw==}
-
-  '@jupyterlab/filebrowser@4.4.3':
-    resolution: {integrity: sha512-XpZ93X6nyjLd1YV8ZcJU2f2mKMNEJJ4sVFKUa5hshacY63m/6xVOWFuqkKVZ4nz3aZ43lQqd0WSSQDhUP3bOyQ==}
 
   '@jupyterlab/filebrowser@4.4.4':
     resolution: {integrity: sha512-yygY65s1o1ACPJcXy3idyepUls5drhLCTdG34ytV07OZM13VtEUm7kbmJAPtrbCLrS/LnG67a0K2ViUOdrDkCA==}
@@ -1124,9 +1118,6 @@ packages:
 
   '@jupyterlab/statedb@4.4.4':
     resolution: {integrity: sha512-F9OFm3EqLmBZ0Y2M6N/7s43/swKXFmcF6qkmoSiepsWI+bpXvH4e5S0v+hWyw0Sdbr050v47bx4YrAeB8E4PYA==}
-
-  '@jupyterlab/statusbar@4.4.3':
-    resolution: {integrity: sha512-qTwcnhDzFvz4FT3WzTJaE+I8cjHqv7CsaRfJ0ZW4nY+0EpzFc1HJYVOnz6xlqlGgIpKs085OjrjC8Zm0uKJKjg==}
 
   '@jupyterlab/statusbar@4.4.4':
     resolution: {integrity: sha512-myiY3IUzGHRqvq1WkoK/XOYIOjJvNr2UFaMutTGa0ReJSIWaehm3pj26nUpDOwfgHChzuEk8AIxd+vv9xrh4YA==}
@@ -5922,29 +5913,6 @@ snapshots:
       path-browserify: 1.0.1
       url-parse: 1.5.10
 
-  '@jupyterlab/docmanager@4.4.3':
-    dependencies:
-      '@jupyterlab/apputils': 4.5.4
-      '@jupyterlab/coreutils': 6.4.3
-      '@jupyterlab/docregistry': 4.4.3
-      '@jupyterlab/services': 7.4.3(react@18.3.1)
-      '@jupyterlab/statedb': 4.4.4
-      '@jupyterlab/statusbar': 4.4.3
-      '@jupyterlab/translation': 4.4.3(react@18.3.1)
-      '@jupyterlab/ui-components': 4.4.3(react@18.3.1)
-      '@lumino/algorithm': 2.0.3
-      '@lumino/coreutils': 2.2.1
-      '@lumino/disposable': 2.1.4
-      '@lumino/messaging': 2.0.3
-      '@lumino/polling': 2.1.4
-      '@lumino/properties': 2.0.3
-      '@lumino/signaling': 2.1.4
-      '@lumino/widgets': 2.7.1
-      react: 18.3.1
-    transitivePeerDependencies:
-      - bufferutil
-      - utf-8-validate
-
   '@jupyterlab/docmanager@4.4.4':
     dependencies:
       '@jupyterlab/apputils': 4.5.4
@@ -6027,32 +5995,6 @@ snapshots:
       '@lumino/messaging': 2.0.3
       '@lumino/polling': 2.1.4
       '@lumino/signaling': 2.1.4
-      '@lumino/widgets': 2.7.1
-      react: 18.3.1
-    transitivePeerDependencies:
-      - bufferutil
-      - utf-8-validate
-
-  '@jupyterlab/filebrowser@4.4.3':
-    dependencies:
-      '@jupyterlab/apputils': 4.5.4
-      '@jupyterlab/coreutils': 6.4.3
-      '@jupyterlab/docmanager': 4.4.3
-      '@jupyterlab/docregistry': 4.4.3
-      '@jupyterlab/services': 7.4.3(react@18.3.1)
-      '@jupyterlab/statedb': 4.4.3
-      '@jupyterlab/statusbar': 4.4.3
-      '@jupyterlab/translation': 4.4.3(react@18.3.1)
-      '@jupyterlab/ui-components': 4.4.3(react@18.3.1)
-      '@lumino/algorithm': 2.0.3
-      '@lumino/coreutils': 2.2.1
-      '@lumino/disposable': 2.1.4
-      '@lumino/domutils': 2.0.3
-      '@lumino/dragdrop': 2.1.6
-      '@lumino/messaging': 2.0.3
-      '@lumino/polling': 2.1.4
-      '@lumino/signaling': 2.1.4
-      '@lumino/virtualdom': 2.0.3
       '@lumino/widgets': 2.7.1
       react: 18.3.1
     transitivePeerDependencies:
@@ -6335,20 +6277,6 @@ snapshots:
       '@lumino/disposable': 2.1.4
       '@lumino/properties': 2.0.3
       '@lumino/signaling': 2.1.4
-
-  '@jupyterlab/statusbar@4.4.3':
-    dependencies:
-      '@jupyterlab/ui-components': 4.4.3(react@18.3.1)
-      '@lumino/algorithm': 2.0.3
-      '@lumino/coreutils': 2.2.1
-      '@lumino/disposable': 2.1.4
-      '@lumino/messaging': 2.0.3
-      '@lumino/signaling': 2.1.4
-      '@lumino/widgets': 2.7.1
-      react: 18.3.1
-    transitivePeerDependencies:
-      - bufferutil
-      - utf-8-validate
 
   '@jupyterlab/statusbar@4.4.4':
     dependencies:

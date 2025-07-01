@@ -44,7 +44,7 @@
   "dependencies": {
     "@jupyterlab/application": "^4.4.2",
     "@jupyterlab/apputils": "^4.5.4",
-    "@jupyterlab/filebrowser": "^4.4.2",
+    "@jupyterlab/filebrowser": "^4.4.4",
     "@jupyterlab/launcher": "^4.4.2",
     "@jupyterlab/mainmenu": "^4.4.4",
     "@jupyterlab/notebook": "^4.4.4",
