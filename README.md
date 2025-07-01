@@ -1,19 +1,19 @@
-<img src="https://github.com/timkpaine/jupyter-templates/raw/main/docs/logo.png" width=400></img>
+<img src="https://github.com/1kbgz/jupyter-templates/raw/main/docs/logo.png" width=400></img>
 
 Support for notebook templates in jupyter and jupyterlab
 
-[![Build Status](https://github.com/timkpaine/jupyter-templates/actions/workflows/build.yaml/badge.svg?branch=main&event=push)](https://github.com/timkpaine/jupyter-templates/actions/workflows/build.yaml)
-[![codecov](https://codecov.io/gh/timkpaine/jupyter-templates/branch/main/graph/badge.svg)](https://codecov.io/gh/timkpaine/jupyter-templates)
-[![License](https://img.shields.io/github/license/timkpaine/jupyter-templates)](https://github.com/timkpaine/jupyter-templates)
+[![Build Status](https://github.com/1kbgz/jupyter-templates/actions/workflows/build.yaml/badge.svg?branch=main&event=push)](https://github.com/1kbgz/jupyter-templates/actions/workflows/build.yaml)
+[![codecov](https://codecov.io/gh/1kbgz/jupyter-templates/branch/main/graph/badge.svg)](https://codecov.io/gh/1kbgz/jupyter-templates)
+[![License](https://img.shields.io/github/license/1kbgz/jupyter-templates)](https://github.com/1kbgz/jupyter-templates)
 [![PyPI](https://img.shields.io/pypi/v/jupyter-templates.svg)](https://pypi.python.org/pypi/jupyter-templates)
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/timkpaine/jupyter-templates/main?urlpath=lab)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/1kbgz/jupyter-templates/main?urlpath=lab)
 
 
 ## JupyterLab
-![](https://raw.githubusercontent.com/timkpaine/jupyter-templates/main/docs/lab.gif)
+![](https://raw.githubusercontent.com/1kbgz/jupyter-templates/main/docs/lab.gif)
 
 ## Jupyter Notebook
-![](https://raw.githubusercontent.com/timkpaine/jupyter-templates/main/docs/notebook.gif)
+![](https://raw.githubusercontent.com/1kbgz/jupyter-templates/main/docs/notebook.gif)
 
 
 ## Install

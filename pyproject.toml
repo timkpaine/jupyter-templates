@@ -8,7 +8,7 @@ build-backend="hatchling.build"
 
 [project]
 name = "jupyter-templates"
-authors = [{name = "the jupyter-templates authors", email = "t.paine154@gmail.com"}]
+authors = [{name = "the jupyter-templates authors", email = "dev@1kbgz.com"}]
 description = "Support for notebook templates in jupyter and jupyterlab"
 readme = "README.md"
 license = { text = "Apache-2.0" }
@@ -51,8 +51,8 @@ develop = [
 [project.scripts]
 
 [project.urls]
-Repository = "https://github.com/timkpaine/jupyter-templates"
-Homepage = "https://github.com/timkpaine/jupyter-templates"
+Repository = "https://github.com/1kbgz/jupyter-templates"
+Homepage = "https://github.com/1kbgz/jupyter-templates"
 
 [tool.bumpversion]
 current_version = "0.1.1"
